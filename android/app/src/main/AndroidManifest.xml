@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="info.bsmi.nfly">
+
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="nfly"
         android:name="${applicationName}"

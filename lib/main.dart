@@ -48,17 +48,14 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
+  String welcome = "";
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    welcome = "hello motor";
   }
 
   @override
@@ -99,17 +96,17 @@ class _MyHomePageState extends State<MyHomePage> {
               '欢迎使用NFido 客户端，这里是NFly，畅游网络空间，你我自由互联',
             ),
             Text(
-              '$_counter',
+              '$welcome',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+     // floatingActionButton: FloatingActionButton(
+        //onPressed: _incrementCounter,
+      //  tooltip: 'Increment',
+     //   child: const Icon(Icons.add),
+     // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
